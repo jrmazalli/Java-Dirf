@@ -7,10 +7,10 @@ public class GerarRegistroIDREC {
 
 	public static StringBuilder gerar(RegistroIDREC registroIDREC, StringBuilder sb) {
 
-		sb.append("|").append(Util.preencheRegistro(registroIDREC.getReg()));
+		sb.append("").append(Util.preencheRegistro(registroIDREC.getReg()));
 		sb.append("|").append(Util.preencheRegistro(registroIDREC.getCod_receita()));
 		sb.append("|").append('\n');
-
 		return sb;
+
 	}
 }

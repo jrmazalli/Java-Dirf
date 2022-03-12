@@ -12,11 +12,9 @@ public class GerarBlocoRTIRF {
 		BlocoRTIRF blocoRTIRF = dirf.getBlocoRTIRF();
 		sb = sbr;
 
-		// REGISTRO_RTIRF
 		if (!Util.isEmpty(blocoRTIRF.getRegistroRTIRF())) {
 			GerarRegistroRTIRF.gerar(blocoRTIRF.getRegistroRTIRF(), sb);
 		}
-		
 		return sb;
 	}
 }

@@ -7,7 +7,7 @@ public class GerarRegistroFIMDIRF {
 
 	public static StringBuilder gerar(RegistroFIMDIRF registroFIMDIRF, StringBuilder sb) {
 
-		sb.append("|").append(Util.preencheRegistro(registroFIMDIRF.getReg()));
+		sb.append("").append(Util.preencheRegistro(registroFIMDIRF.getReg()));
 		sb.append("|").append('\n');
 
 		return sb;

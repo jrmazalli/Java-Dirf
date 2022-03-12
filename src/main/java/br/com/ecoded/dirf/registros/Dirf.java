@@ -51,6 +51,19 @@ public class Dirf {
 	public void setBlocoIDREC(BlocoIDREC blocoIDREC) {
 		this.blocoIDREC = blocoIDREC;
 	}
+	
+	
+//	public List<BlocoIDREC> getBlocoIDREC() {
+//		if (blocoIDREC == null) {
+//			blocoIDREC = new ArrayList<BlocoIDREC>();
+//		}
+//		return blocoIDREC;
+//	}
+//
+//	public void setBlocoIDREC(List<BlocoIDREC> blocoIDREC) {
+//		this.blocoIDREC = blocoIDREC;
+//	}
+	
 
 	public BlocoBPJDEC getBlocoBPJDEC() {
 		return blocoBPJDEC;

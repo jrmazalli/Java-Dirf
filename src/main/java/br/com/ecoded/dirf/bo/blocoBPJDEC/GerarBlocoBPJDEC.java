@@ -1,5 +1,7 @@
 package br.com.ecoded.dirf.bo.blocoBPJDEC;
 
+import br.com.ecoded.dirf.bo.blocoRTIRF.GerarRegistroRTIRF;
+import br.com.ecoded.dirf.bo.blocoRTRT.GerarRegistroRTRT;
 import br.com.ecoded.dirf.registros.Dirf;
 import br.com.ecoded.dirf.registros.blocoBPJDEC.BlocoBPJDEC;
 import br.com.ecoded.dirf.util.Util;
@@ -12,12 +14,13 @@ public class GerarBlocoBPJDEC {
 		BlocoBPJDEC blocoBPJDEC = dirf.getBlocoBPJDEC();
 		sb = sbr;
 
-		// REGISTRO_BPJDEC
 		if (!Util.isEmpty(blocoBPJDEC.getRegistroBPJDEC())) {
-			GerarRegistroBPJDEC.gerar(blocoBPJDEC.getRegistroBPJDEC(), sb);
+			blocoBPJDEC.getRegistroBPJDEC().forEach(registroBPJDEC -> {
+				GerarRegistroBPJDEC.gerar(registroBPJDEC, sb);
+				GerarRegistroRTRT.gerar(registroBPJDEC.getRegistroRTRT(), sb);
+				GerarRegistroRTIRF.gerar(registroBPJDEC.getRegistroRTIRF(), sb);
+			});
 		}
-
 		return sb;
-
 	}
 }

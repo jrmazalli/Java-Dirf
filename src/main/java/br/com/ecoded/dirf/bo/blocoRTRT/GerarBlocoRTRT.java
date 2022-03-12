@@ -12,7 +12,6 @@ public class GerarBlocoRTRT {
 		BlocoRTRT blocoRTRT = dirf.getBlocoRTRT();
 		sb = sbr;
 
-		// REGISTRO_RTRT
 		if (!Util.isEmpty(blocoRTRT.getRegistroRTRT())) {
 			GerarRegistroRTRT.gerar(blocoRTRT.getRegistroRTRT(), sb);
 		}
@@ -21,4 +20,3 @@ public class GerarBlocoRTRT {
 
 	}
 }
-

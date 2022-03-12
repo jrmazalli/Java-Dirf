@@ -11,5 +11,5 @@ public class BlocoRTRT {
 	public void setRegistroRTRT(RegistroRTRT registroRTRT) {
 		this.registroRTRT = registroRTRT;
 	}
-	
+
 }

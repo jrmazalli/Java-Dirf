@@ -12,7 +12,6 @@ public class GerarBlocoFIMDIRF {
 		BlocoFIMDIRF blocoFIMDIRF = dirf.getBlocoFIMDIRF();
 		sb = sbr;
 
-		// REGISTRO_FIMDIRF
 		if (!Util.isEmpty(blocoFIMDIRF.getRegistroFIMDIRF())) {
 			GerarRegistroFIMDIRF.gerar(blocoFIMDIRF.getRegistroFIMDIRF(), sb);
 		}

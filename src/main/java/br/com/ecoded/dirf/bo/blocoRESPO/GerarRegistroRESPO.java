@@ -7,7 +7,7 @@ public class GerarRegistroRESPO {
 
 	public static StringBuilder gerar(RegistroRESPO registroRESPO, StringBuilder sb) {
 
-		sb.append("|").append(Util.preencheRegistro(registroRESPO.getReg()));
+		sb.append("").append(Util.preencheRegistro(registroRESPO.getReg()));
 		sb.append("|").append(Util.preencheRegistro(registroRESPO.getCpf()));
 		sb.append("|").append(Util.preencheRegistro(registroRESPO.getNome()));
 		sb.append("|").append(Util.preencheRegistro(registroRESPO.getDdd()));

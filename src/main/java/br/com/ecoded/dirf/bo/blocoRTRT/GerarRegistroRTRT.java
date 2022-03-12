@@ -7,7 +7,7 @@ public class GerarRegistroRTRT {
 
 	public static StringBuilder gerar(RegistroRTRT registroRTRT, StringBuilder sb) {
 
-		sb.append("|").append(Util.preencheRegistro(registroRTRT.getReg()));
+		sb.append("").append(Util.preencheRegistro(registroRTRT.getReg()));
 		sb.append("|").append(Util.preencheRegistro(registroRTRT.getJaneiro()));
 		sb.append("|").append(Util.preencheRegistro(registroRTRT.getFevereiro()));
 		sb.append("|").append(Util.preencheRegistro(registroRTRT.getMarco()));

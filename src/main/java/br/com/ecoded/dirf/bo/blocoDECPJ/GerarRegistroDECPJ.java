@@ -7,12 +7,13 @@ public class GerarRegistroDECPJ {
 
 	public static StringBuilder gerar(RegistroDECPJ registroDECPJ, StringBuilder sb) {
 
-		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getReg()));
+		sb.append("").append(Util.preencheRegistro(registroDECPJ.getReg()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getCnpj()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getNome_empresarial()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getNatureza_declarante()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getCpf_resp_perant_cnpj()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getInd_scp()));
+		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getInd_decl_dep_cred_dec_decs_jud()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getInd_decl_inst_adm_interm_fund_clib_invest()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getInd_decl_rend_pag_resid_domic_ext()));
 		sb.append("|").append(Util.preencheRegistro(registroDECPJ.getInd_plan_priv_assist_saud()));

@@ -12,12 +12,9 @@ public class GerarBlocoDECPJ {
 		BlocoDECPJ blocoDECPJ = dirf.getBlocoDECPJ();
 		sb = sbr;
 
-		// REGISTRO_DECPJ
 		if (!Util.isEmpty(blocoDECPJ.getRegistroDECPJ())) {
 			GerarRegistroDECPJ.gerar(blocoDECPJ.getRegistroDECPJ(), sb);
 		}
-
 		return sb;
-
 	}
 }

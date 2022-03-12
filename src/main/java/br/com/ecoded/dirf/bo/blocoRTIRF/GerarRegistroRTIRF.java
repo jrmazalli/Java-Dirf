@@ -7,7 +7,7 @@ public class GerarRegistroRTIRF {
 
 	public static StringBuilder gerar(RegistroRTIRF registroRTIRF, StringBuilder sb) {
 
-		sb.append("|").append(Util.preencheRegistro(registroRTIRF.getReg()));
+		sb.append("").append(Util.preencheRegistro(registroRTIRF.getReg()));
 		sb.append("|").append(Util.preencheRegistro(registroRTIRF.getJaneiro()));
 		sb.append("|").append(Util.preencheRegistro(registroRTIRF.getFevereiro()));
 		sb.append("|").append(Util.preencheRegistro(registroRTIRF.getMarco()));

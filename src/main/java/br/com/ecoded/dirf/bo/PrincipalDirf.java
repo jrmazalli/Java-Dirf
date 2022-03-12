@@ -19,7 +19,6 @@ import br.com.ecoded.dirf.registros.blocoRTRT.RegistroRTRT;
 
 public class PrincipalDirf {
 
-	// BLOCO DIRF
 	public static BlocoDIRF preencheBlocoDirf() {
 		BlocoDIRF blocoDirf = new BlocoDIRF();
 		blocoDirf = preencheRegistroDIRF(blocoDirf);
@@ -33,13 +32,12 @@ public class PrincipalDirf {
 		registroDirf.setAno_calendario("2022");
 		registroDirf.setInd_retificadora("");
 		registroDirf.setNum_recibo_anterior("");
-		registroDirf.setInd_estrutura_leiaute("");
+		//registroDirf.setInd_estrutura_leiaute("");
 		blocoDirf.setRegistroDIRF(registroDirf);
 
 		return blocoDirf;
 	}
 
-	// BLOCO RESPO
 	public static BlocoRESPO preencheBlocoRespo() {
 		BlocoRESPO blocoRespo = new BlocoRESPO();
 		blocoRespo = preencheRegistroRESPO(blocoRespo);
@@ -62,7 +60,6 @@ public class PrincipalDirf {
 
 	}
 
-	// BLOCO DECPJ
 	public static BlocoDECPJ preencheBlocoDecpj() {
 		BlocoDECPJ blocoDecpj = new BlocoDECPJ();
 		blocoDecpj = preecheRegistroDECPJ(blocoDecpj);
@@ -88,10 +85,8 @@ public class PrincipalDirf {
 		blocoDecpj.setRegistroDECPJ(registroDecpj);
 
 		return blocoDecpj;
-
 	}
 
-	// BLOCO IDREC
 	public static BlocoIDREC preencheBlocoIdrec() {
 		BlocoIDREC blocoIdrec = new BlocoIDREC();
 		blocoIdrec = preencheRegistroIDREC(blocoIdrec);
@@ -102,13 +97,12 @@ public class PrincipalDirf {
 	public static BlocoIDREC preencheRegistroIDREC(BlocoIDREC blocoIdrec) {
 		RegistroIDREC registroIdrec = new RegistroIDREC();
 		registroIdrec.setCod_receita("");
-		blocoIdrec.setRegistroIDREC(registroIdrec);
+		
+		 blocoIdrec.getRegistroIDREC().add(registroIdrec);
 
 		return blocoIdrec;
-
 	}
 
-	// BLOCO BPJDEC
 	public static BlocoBPJDEC preencheBlocoBpjdec() {
 		BlocoBPJDEC blocoBpjdec = new BlocoBPJDEC();
 		blocoBpjdec = preencheRegistroBPJDEC(blocoBpjdec);
@@ -120,13 +114,11 @@ public class PrincipalDirf {
 		RegistroBPJDEC registroBpjdec = new RegistroBPJDEC();
 		registroBpjdec.setCnpj("");
 		registroBpjdec.setNome_empresarial("");
-		blocoBpjdec.setRegistroBPJDEC(registroBpjdec);
-
+		blocoBpjdec.getRegistroBPJDEC().add(registroBpjdec);
+		
 		return blocoBpjdec;
-
 	}
 
-	// BLOCO RTRT
 	public static BlocoRTRT preencheBlocoRtrt() {
 		BlocoRTRT blocoRtrt = new BlocoRTRT();
 		blocoRtrt = preencheRegistroRTRT(blocoRtrt);
@@ -149,13 +141,12 @@ public class PrincipalDirf {
 		registroRtrt.setNovembro("");
 		registroRtrt.setDezembro("");
 		registroRtrt.setDecimo_terceiro("");
+		
 		blocoRtrt.setRegistroRTRT(registroRtrt);
 
 		return blocoRtrt;
-
 	}
 
-	// BLOCO RTIRF
 	public static BlocoRTIRF preencheBlocoRtirf() {
 		BlocoRTIRF blocoRtirf = new BlocoRTIRF();
 		blocoRtirf = preencheRegistroRTIRF(blocoRtirf);
@@ -179,12 +170,10 @@ public class PrincipalDirf {
 		registroRtirf.setDezembro("");
 		registroRtirf.setDecimo_terceiro("");
 		blocoRtirf.setRegistroRTIRF(registroRtirf);
-
+		
 		return blocoRtirf;
-
 	}
 
-	// BLOCO FIMDIRF
 	public static BlocoFIMDIRF preencheBlocoFimDirf() {
 		BlocoFIMDIRF blocoFimDirf = new BlocoFIMDIRF();
 		blocoFimDirf = preencheRegistroFIMDIRF(blocoFimDirf);

@@ -13,19 +13,10 @@ public final class Util {
 	private final static String dataVersao2021 = "2021";
 	private final static String dataVersao2022 = "2022";
 
-	/**
-	 * Construtor privado para garantir o Singleton.
-	 */
 	private Util() {
 
 	}
 
-	/**
-	 * Verifica se um objeto está vazio.
-	 * 
-	 * @param obj
-	 * @return <b>true</b> se o objeto for vazio(empty).
-	 */
     public static boolean isEmpty(Object obj) {
 		if (obj == null)
 			return true;
@@ -36,20 +27,11 @@ public final class Util {
 
 		return s.length() == 0 || s.equalsIgnoreCase("null");
 	}
-    
-    /**
-	 * Preenche o Registro
-	 * 
-	 * @param String
-	 */
+
     public static String preencheRegistro(String string) {
     	return Util.isEmpty(string)? "" : string;
 	}
     
-    /**
-     * Cria um arquivo com os dados passados 
-     * @throws Exception 
-     */
     public static void criarPastaArquivo(String pasta, String arquivo , String conteudo ) throws DirfException {
     	
     	File folder = new File(pasta);
@@ -67,7 +49,7 @@ public final class Util {
     	}
     }
 
-	private static String ano(String dataStr) { // LocalDate strToDate(String dataStr) {
+	private static String ano(String dataStr) { 
 		return dataStr;
 	}
 
@@ -83,10 +65,11 @@ public final class Util {
 	public static boolean versao2022(String dataStr) {
 		return ano(dataStr).contains(dataVersao2022);
 	}
-	
-
 
 	public static String getCodLeiaute(Dirf dirf) {
+		if (versao2022(dirf.getBlocoDIRF().getRegistroDIRF().getAno_referencia())) {
+			return "XJFSFHB";
+		} else
 		if (versao2021(dirf.getBlocoDIRF().getRegistroDIRF().getAno_referencia())) {
 			return "XJFSFHB";
 		} else if (versao2020(dirf.getBlocoDIRF().getRegistroDIRF().getAno_referencia())) {
@@ -95,6 +78,5 @@ public final class Util {
 			return "--";
 		}
 	}
-    
    
 }

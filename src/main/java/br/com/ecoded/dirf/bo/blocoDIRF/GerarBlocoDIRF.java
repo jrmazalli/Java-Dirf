@@ -6,19 +6,18 @@ import br.com.ecoded.dirf.util.Util;
 
 public class GerarBlocoDIRF {
 
-    private static StringBuilder sb = null;
+	private static StringBuilder sb = null;
 
-    public static StringBuilder gerar(Dirf dirf, StringBuilder sbr) {
+	public static StringBuilder gerar(Dirf dirf, StringBuilder sbr) {
 
-        BlocoDIRF blocoDIRF = dirf.getBlocoDIRF();
+		BlocoDIRF blocoDIRF = dirf.getBlocoDIRF();
 
-        sb = sbr;
+		sb = sbr;
 
-        // REGISTRO_DIRF
-        if (!Util.isEmpty(blocoDIRF.getRegistroDIRF())) {
-            GerarRegistroDIRF.gerar(dirf, blocoDIRF.getRegistroDIRF(), sb);
-        }
+		if (!Util.isEmpty(blocoDIRF.getRegistroDIRF())) {
+			GerarRegistroDIRF.gerar(dirf, blocoDIRF.getRegistroDIRF(), sb);
+		}
 
-        return sb;
-    }
+		return sb;
+	}
 }

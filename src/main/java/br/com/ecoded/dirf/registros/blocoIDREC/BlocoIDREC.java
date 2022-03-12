@@ -1,15 +1,21 @@
 package br.com.ecoded.dirf.registros.blocoIDREC;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BlocoIDREC {
 
-	private RegistroIDREC registroIDREC;
+	private List<RegistroIDREC> registroIDREC;
 
-	public RegistroIDREC getRegistroIDREC() {
+	public List<RegistroIDREC> getRegistroIDREC() {
+		if (registroIDREC == null) {
+			registroIDREC = new ArrayList<RegistroIDREC>();
+
+		}
 		return registroIDREC;
 	}
 
-	public void setRegistroIDREC(RegistroIDREC registroIDREC) {
+	public void setRegistroIDREC(List<RegistroIDREC> registroIDREC) {
 		this.registroIDREC = registroIDREC;
 	}
-
 }

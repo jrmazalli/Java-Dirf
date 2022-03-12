@@ -13,7 +13,6 @@ public class GerarBlocoRESPO {
 
 		sb = sbr;
 
-		// REGISTRO_RESPO
 		if (!Util.isEmpty(blocoRESPO.getRegistroRESPO())) {
 			GerarRegistroRESPO.gerar(blocoRESPO.getRegistroRESPO(), sb);
 		}
